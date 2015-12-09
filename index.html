@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>D3 Dynamic SVG Underline</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<style>
+
+html {
+  position: relative;
+  min-height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+/*button stylings*/
+.center-pills { 
+	margin-top:20px;
+	display: flex;
+    justify-content: center;
+}
+.myPill{
+	cursor: pointer; cursor: hand;
+	list-style-type: none;
+	padding:10px;
+	width: 80px;
+}
+.myPill a {
+	font-size:16px;
+	text-decoration: none;
+}
+.myUnderline{
+
+}
+
+#header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 0 15px;
+  height: 60px;
+}
+#header .navbar-default{
+	background-color:#ffffff;
+	border-bottom:white;
+}
+
+#view {
+	position:relative;
+	margin-top:100px;	
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 0 15px;
+  height: 60px;
+}
+
+#footer div p {
+	margin-left:10%;
+}
+
+</style>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+</head>
+<body>
+
+<!--NAVBAR!-->
+<div class = "container">
+	<header id='header'>
+				<div class= "navbar navbar-default navbar-fixed-top">	 <!-- navbar-default navbar-inverse apply bootstrap stylings to navbar -->
+					<ul class = "center-pills">
+							<li class = 'myUnderline myPill text-center'><a>home</a></li>
+							<li class = 'myUnderline myPill text-center'><a>blog</a></li>
+							<li class = 'myUnderline myPill text-center'><a>apps</a></li>
+							<li class = 'myUnderline myPill text-center'><a>about</a></li>
+							<li class = 'myUnderline myPill text-center' onmousedown="window.location = 'http://goatse.ch';"><a>contact</a></li>
+					</ul>
+					
+			</div>
+	</header>
+	
+</div>
+
+<!--VIEW  test generic case of underlining function -->	
+<div id ="view" class="container" style="height:2000px">
+	<div class="row">
+		<div class = "col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xs-push-3 col-sm-push-3 col-md-push-3 col-lg-push-3 myUnderline">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pulvinar aliquet nibh ac auctor. Donec sapien risus, ullamcorper sit amet tristique in, feugiat nec erat. Nunc at magna orci. Nam feugiat diam a mauris vestibulum varius. Nunc bibendum dignissim eros ut suscipit. Nam felis lorem, fringilla quis pretium ut, tempus eget felis. Duis consectetur eget magna quis ultrices. Aliquam eget pretium magna, non euismod nunc. In et semper justo.
+			</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class = "col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xs-push-3 col-sm-push-3 col-md-push-3 col-lg-push-3 myUnderline">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pulvinar aliquet nibh ac auctor. Donec sapien risus, ullamcorper sit amet tristique in, feugiat nec erat. Nunc at magna orci. Nam feugiat diam a mauris vestibulum varius. Nunc bibendum dignissim eros ut suscipit. Nam felis lorem, fringilla quis pretium ut, tempus eget felis. Duis consectetur eget magna quis ultrices. Aliquam eget pretium magna, non euismod nunc. In et semper justo.
+			</p>
+		</div>
+		<div class = "col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xs-push-3 col-sm-push-3 col-md-push-3 col-lg-push-3 myUnderline">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pulvinar aliquet nibh ac auctor. Donec sapien risus, ullamcorper sit amet tristique in, feugiat nec erat. Nunc at magna orci. Nam feugiat diam a mauris vestibulum varius. Nunc bibendum dignissim eros ut suscipit. Nam felis lorem, fringilla quis pretium ut, tempus eget felis. Duis consectetur eget magna quis ultrices. Aliquam eget pretium magna, non euismod nunc. In et semper justo.
+			</p>
+		</div>
+	</div>
+</div>
+
+<!-- FOOTER TEMPLATE -->
+
+<div class = "container">
+	<footer id='footer'>
+			<div class= "navbar navbar-default navbar-fixed-bottom">
+						<div class = 'col-xs-10 col-sm-8 col-md-6 col-lg-6 col-xs-push-1 col-sm-push-2 col-md-push-3 col-lg-push-3'>
+							<div class = "container" style = "margin-left:25%">
+								<p class="navbar-text" >© 2015 Rustcity</p>
+							</div>
+						</div>
+			</div>
+	</footer>
+</div>
+<script src = "myUnderline.js"></script>
+</body>
+</html>
